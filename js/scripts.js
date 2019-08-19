@@ -7,11 +7,12 @@ $(document).ready(function() {
     var item5 = $("input#item5").val();
 
     var valueArray = [item1, item2, item3, item4, item5]
-    valueArray.forEach(function(value){
-      $("#alphaG").append("<li>" + value + "</li>");
-    });
 
-    // $("#alphaG").sort("<li>" + SOMETHING + "</li>");
+    valueArray.sort();
+    console.log(valueArray)
+    valueArray.forEach(function(value){
+      $("#alphaG").text("<li>" + value + "</li>");
+    });
     event.preventDefault();
   });
 });
